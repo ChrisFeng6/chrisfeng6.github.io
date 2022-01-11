@@ -129,11 +129,11 @@ var projects = {
     "contact": [
         {   
             "title": "Email",
-            "content": "yupengf@andrew.cmu.edu",
+            "content": "yupeng.feng123@gmail.com",
         },
         {
             "title": "Cell",
-            "content": "(808) 397-6354",
+            "content": "+86 13718139031",
         },
         {
             "title": "LinkedIn",
