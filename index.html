@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119353440-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119353440-1');
+  </script>
+
+  <title>chrisfeng.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--bootstrap stuff-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- loads jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- handlebars -->
+  <script src="lib/handlebars-v4.0.11.js"></script>
+  <!--jquery color-->
+  <script src="lib/jcolor.js"></script>
+  <!-- load in P5 library -->
+  <script src="p5/p5.min.js"></script>
+  <script src="p5/addons/p5.dom.min.js"></script>
+  <script src="p5/addons/p5.sound.min.js"></script>
+  <script src="scripts/sketch.js"></script>
+
+  <!--The following line loads in your JS script-->
+  <script src="scripts/script.js"></script>
+  <!-- load in my own style sheet -->
+  <link rel="stylesheet" href="style/main.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!--
+  A wise man named Socrates once said people who view the source code of a 
+  portfolio website are angels in their previous life. Thank you, angel!
+
+  
+quu..__
+ $$$b  `---.__
+  "$$b        `--.                          ___.---uuudP
+   `$$b           `.__.------.__     __.---'      $$$$"              .
+     "$b          -'            `-.-'            $$$"              .'|
+       ".                                       d$"             _.'  |
+         `.   /                              ..."             .'     |
+           `./                           ..::-'            _.'       |
+            /                         .:::-'            .-'         .'
+           :                          ::''\          _.'            |
+          .' .-.             .-.           `.      .'               |
+          : /'$$|           .@"$\           `.   .'              _.-'
+         .'|$u$$|          |$$,$$|           |  <            _.-'
+         | `:$$:'          :$$$$$:           `.  `.       .-'
+         :                  `"--'             |    `-.     \
+        :##.       ==             .###.       `.      `.    `\
+        |##:                      :###:        |        >     >
+        |#'     `..'`..'          `###'        x:      /     /
+         \                                   xXX|     /    ./
+          \                                xXXX'|    /   ./
+          /`-.                                  `.  /   /
+         :    `-  ...........,                   | /  .'
+         |         ``:::::::'       .            |<    `.
+         |             ```          |           x| \ `.:``.
+         |                         .'    /'   xXX|  `:`M`M':.
+         |    |                    ;    /:' xXXX'|  -'MMMMM:'
+         `.  .'                   :    /:'       |-'MMMM.-'
+          |  |                   .'   /'        .'MMM.-'
+          `'`'                   :  ,'          |MMM<
+            |                     `'            |tbap\
+             \                                  :MM.-'
+              \                 |              .''
+               \.               `.            /
+                /     .:::::::.. :           /
+               |     .:::::::::::`.         /
+               |   .:::------------\       /
+              /   .''               >::'  /
+              `',:                 :    .'
+                                   `:.:' 
+-->
+
+  <style>
+    body {
+        /*font:  Montserrat, sans-serif;*/
+        font-family: Avenir;
+        background-color: black;
+        color: white;
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        width: 1200px;
+      }
+    }
+
+    .intro_para {
+        padding-right: 1%;
+        font-size: 1.5em;
+        line-height: 1.8em;
+        padding-bottom: 20em;
+    }
+
+    .project_container {
+        width: 80%;
+        display: none;
+        margin-bottom:150px;
+    }
+
+    .project-detail {
+      padding: 120px 10px;
+    }
+
+    .project-detail h2 {
+      font-weight: bold; 
+      font-size: 35px; 
+      margin-bottom: 5px
+    }
+
+    .project-detail p.type {
+      color:black; 
+      font-size: 18px; 
+      font-weight: 500;
+      padding-top: 0px;
+    }
+
+    .project-detail p.description {
+      color:#9B9B9B; 
+      font-family:Baskerville serif; 
+      font-size:22px; 
+      font-weight: lighter;
+      padding-right:20px; 
+      padding-bottom:30px;
+    }
+
+    .project-image {
+      width: 100%;
+    }
+
+    .project-btn{
+        color:white; 
+        background-color:#1F1F1F; 
+        border:none; 
+        border-radius:0px; 
+        font-weight:bold; 
+        font-size:15px; 
+        padding: 14px 40px;
+        -webkit-transition-duration: 0.5s;
+    }
+
+    /*contact page*/
+    #contact_container {
+      margin-top: 100px;
+    }
+    #contact_container p.title {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    #contact_container p.content {
+      font-size: 1.2em;
+    }
+    .contact-detail {
+      margin-top: 30px;
+    }
+
+    /*blog page*/
+    #blog_container {
+      margin-top: 80px;
+    }
+
+    #blog_container a{
+      text-decoration: none;
+    }
+
+    #blog_container h1{
+      font-weight: 600;
+      font-size: 26px;
+      color: black;
+      margin-bottom: 5px;
+    }
+
+    #blog_container h2{
+      font-size: 20px;
+      margin: 0;
+      color: black;
+    }
+
+
+    #blog_container h3{
+      font-size: 16px;
+      margin-top: 10px;
+      color: #939393;
+    }
+
+    .blog-detail {
+      margin-bottom: 60px;
+    }
+
+    #defaultCanvas0 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    .modal {
+      color: black;
+    }
+
+    .intro a {
+      color: white;
+    }
+
+  
+  </style>
+</head>
+<body>
+    <div class ="container">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid" style = "padding-left: 0;">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a id="intro_btn" class="navbar-brand" href="#"><span class="glyphicon glyphicon-king"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li><a class = "nav_btn work_btn" href="#">WORK</a></li>
+                <li><a class = "nav_btn play_btn" href="#">PLAY</a></li>
+                <!--<li><a class = "nav_btn" id="myself_btn" href="#">MYSELF</a></li>-->
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a class = "nav_btn blog_btn" href="#">BLOG</a></li>
+                <li><a class = "nav_btn contact_btn" href="#">CONTACT</a></li>
+                <li><a id="contact_btn" href="resume.pdf" target="_blank">RÉSUMÉ</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+    </div>
+
+    <div class="container intro">    
+        <div class="row">
+            <div class = "col-sm-6 intro_para" style="color: #ffffff;">
+                <h2>Chris Feng</h2>
+                <p>I am a senior at <a href="http://www.cmu.edu/" class = "link" target="_blank">Carnegie Mellon University</a>, majoring in <a href="https://www.hcii.cmu.edu/" class = "link" target="_blank">Human Computer Interaction</a>, <a href="https://www.ece.cmu.edu/" class = "link" target="_blank">Electrical & Computer Engineering</a> and minoring in <a href="https://design.cmu.edu/" class = "link" target="_blank">Design</a>. I worked at <a href="http://whiteboxnyc.org/" class = "link" target="_blank">WhiteBox Art Center</a> as a Design and Technical Intern in summer 2018 and at <a href="https://bizy.com/" class = "link" target="_blank">Bizy, LLC</a>. as a Design Intern in summer 2016. I am currently looking for a full-time opportunity starting or after January 2019. Learn more about my <a class = "nav_btn work_btn" href="#">WORK</a> and <a class = "nav_btn play_btn" href="#">PLAY</a>.</p>
+                <p style="color:#AAAAAA; font-size:0.8em;">Click anywhere on screen to be <b id = "suprised" style="color:#FFFFFF;">surprised</b></p>
+            </div>
+            <div class = "col-sm-6">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container project_container" id = "work_container" >       
+        </div>
+        <div class="container project_container" id = "play_container">       
+        </div>
+        <div class="container project_container" id = "myself_container">       
+        </div>
+        <div class="container project_container" id = "contact_container">       
+        </div>
+        <div class="container project_container" id = "blog_container"> 
+        </div>
+    </div>
+
+    <!-- work-->
+    <script class= "project-template" id = "work_template" type="text/x-handlebars-template">
+    {{#each work}}
+        <div class="row project-detail" id = {{ id }}>
+            <div class="col-sm-6">
+                <h2>{{name}}</h2>
+                <p class = "type">{{type}}</p>
+                <p class = "description">{{description}}</p>
+                <a href= {{link}}><button type="button" class="btn btn-default project-btn">{{btn_words}}</button></a>
+            </div>
+            <div class="col-sm-6">
+                <img class = "project-image" src={{ img }}>
+            </div>
+        </div>
+    {{/each}}
+    </script>
+
+    <!-- play-->
+    <script class= "project-template" id = "play_template" type="text/x-handlebars-template">
+    {{#each play}}
+        <div class="row project-detail" id = {{ id }}>
+            <div class="col-sm-6">
+                <h2>{{name}}</h2>
+                <p class = "type">{{type}}</p>
+                <p class = "description">{{description}}</p>
+                <a href= {{link}}><button type="button" class="btn btn-default project-btn">{{btn_words}}</button></a>
+            </div>
+            <div class="col-sm-6">
+                <img class = "project-image" src={{ img }}>
+            </div>
+        </div>
+    {{/each}}
+    </script>
+
+    <!-- myself -->
+    <script class= "project-template" id = "myself_template" type="text/x-handlebars-template">
+    {{#each myself}}
+        <div class="row project-detail" id = {{ id }}>
+            <div class="col-sm-6">
+                <h2>{{name}}</h2>
+                <p class = "type">{{type}}</p>
+                <p class = "description">{{description}}</p>
+                <a href= {{link}}><button type="button" class="btn btn-default project-btn">{{btn_words}}</button></a>
+            </div>
+            <div class="col-sm-6">
+                <img class = "project-image" src={{ img }}>
+            </div>
+        </div>
+    {{/each}}
+    </script>
+
+    <!-- contact -->
+    <script class= "project-template" id = "contact_template" type="text/x-handlebars-template">
+    {{#each contact}}
+        <div class="row contact-detail">
+            <div class = "col-sm-1"> 
+            </div>
+            <div class = "col-sm-5"> 
+              <p class = "title">{{title}}</p>
+            </div>
+            <div class = "col-sm-6">
+              <p class = "content">{{content}}</p>
+            </div>
+        </div>
+    {{/each}}
+    </script>
+
+    <!-- blog -->
+    <script class= "project-template" id = "blog_template" type="text/x-handlebars-template">
+    {{#each blog}}
+        <div class="row blog-detail">
+            <div class = "col-sm-1"> 
+            </div>
+            <div class = "col-sm-11"> 
+              <a href = {{link}}>
+              <h1 class = "title" style = "{{style}}" lang = "{{lang}}">{{title}}</h1>
+              <h2>{{translation}}</h2>
+              </a>
+              <h3 class = "description">{{description}}</h3>
+            </div>
+        </div>
+    {{/each}}
+    </script>
+
+    <!-- Underconstruction Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><b>oooooooooops!</b></h4>
+          </div>
+          <div class="modal-body">
+            <p>This page is under construction, will be back soon.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+</body>
+</html>
+
+
