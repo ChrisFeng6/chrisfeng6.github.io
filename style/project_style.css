@@ -1,0 +1,134 @@
+/*the fundamental of each block*/
+.row {
+    margin-top: 100px;
+}
+
+/*main header*/
+.header {
+    margin-top: 40px;
+    font-family: Avenir;
+    font-weight: book;
+}
+
+/*the header where the product and the process is divided*/
+.header_process {
+    margin-top: 100px;
+    font-family: Avenir;
+}
+
+img.span_1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%
+}
+
+img.span_2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%
+}
+
+img.continuous {
+    margin-bottom: 70px;
+}
+
+.img_caption {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 14px;
+    color: #A1A1A1;
+}
+
+img.screen {
+    width: 100%;
+}
+
+/*main big title*/
+h1 {
+    margin: 0;
+    font-weight: 500;
+}
+
+/*subtitle beneath the big title*/
+h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*translucent subtitle*/
+h3 {
+    font-weight: 500;
+    color: #AAAAAA;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+/*sub title*/
+h3.section_sub_title {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* process title */
+h1.title_process {
+    margin: 0;
+    font-weight: 300;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #313131;
+    font-size: 15px;
+    line-height: 1.6em;
+}
+
+p.project_info {
+    font-weight: 300;
+    color: #505050;
+}
+
+p.continuous {
+    margin-bottom: 1.5em;
+}
+
+span.six_hundred {
+    font-weight: 600;
+}
+
+ul {
+    padding-left:15px;
+}
+
+div.vertically_centered_block {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.invision-btn{
+    color:white; 
+    background-color:#1F1F1F; 
+    border:none; 
+    border-radius:0px; 
+    font-weight:500; 
+    font-size:13px; 
+    padding: 7px 20px;
+    margin-top: 10px;
+    -webkit-transition-duration: 0.5s;
+  }
+
+
+.link {
+    color: #DA9435;
+}
+
+/*embeded vimeo video*/
+.video {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}

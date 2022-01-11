@@ -1,0 +1,108 @@
+/*load in some font*/
+@font-face {
+    font-family: Avenir;
+    src: url('../font/AvenirLTStd-Light.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url('../font/AvenirLTStd-Book.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url('../font/AvenirLTStd-Roman.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url('../font/avenir-medium-webfont.woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url('../font/Avenir-Heavy.ttf');
+    font-weight: 650;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url('../font/Avenir-black.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+.navbar {
+    margin-top: 50px;   
+    margin-bottom: 50px;
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Carousel */
+.carousel {
+    width: 600px;
+    margin: auto;
+
+}
+
+.carousel-inner{
+  /*max-height: 800px !important;*/
+}
+
+.carousel_img {
+    width: 100%;
+}
+
+/*back button */
+.back_button {
+    color: #B1B1B1;
+}
+
+.back_button:hover {
+    color: #313131;
+}
+
+
+.back_button_text {
+    vertical-align:1px;
+    background-color: Transparent;
+}
+
+.back_button_div {
+    margin-top: 80px;
+}
+
+.back_button_div_top {
+    margin-top: 80px;
+}
+
+/* Footer */
+footer { 
+    text-align: center;
+    margin-top: 150px; 
+    color:#BBB; 
+    font-family:Helvetica; 
+    margin-bottom: 40px;}

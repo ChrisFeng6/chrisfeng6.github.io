@@ -1,0 +1,120 @@
+
+.header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+h1{
+  font-family: Avenir;
+  font-weight: 650;
+  font-size: 28px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+h2{
+  font-family: Avenir;
+  font-size: 20px;
+  margin: 0;
+  color: black;
+}
+
+.author {
+  margin-top: 20px;
+}
+
+img.profile {
+  height: 44px;
+  vertical-align: top;
+}
+
+img.divider{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 40%;
+  height: 1px;
+
+}
+
+h3{
+  display: inline-block;
+  font-family: Avenir;
+  font-size: 16px;
+  margin-top: 0px;
+  margin-left: 8px;
+  line-height: 1.5em;
+  color: #939393;
+}
+
+span.subtitle {
+  display: block;
+  font-family: Avenir;
+  font-weight: 650;
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+p {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  color: #313131;
+  font-size: 20px;
+  line-height: 1.6em;
+}
+
+p.chinese {
+  line-height: 1.8em;
+  text-indent: 2em;
+}
+
+.s {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    h1 {
+      font-size: 1.7em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+    }
+
+    h3{
+      font-size: 1em;
+    }
+
+    img.profile {
+      height: 44px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .s {
+      width: 95%;
+    }
+
+    .m{
+      width: 95%;
+    }
+}
